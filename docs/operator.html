@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <meta property="og:image" content="https://grcodeclub.gr/files-page/preview/cpp.png"/>
+        <meta property="og:title" content="Γλώσσα Προγραμματισμού C++ | Υπερφόρτωση τελεστών">
+        <script src="https://grcodeclub.github.io/js/jquery.js"></script>
+        <script src="https://grcodeclub.github.io/programming/js/menu.js"></script>
+        <script src="https://grcodeclub.github.io/js/add/head.js"></script>
+        <script src="https://grcodeclub.github.io/js/prism.js"></script>
+        <style>
+            td{
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+     <body class="programming">
+        <div class="container">
+            <div id="add_headder_and_menu"></div><script src="https://grcodeclub.github.io/js/add/headder_and_menu.js"></script>
+            <div class="Text"> <!--Αρχή Κειμένου-->
+                <a href="https://grcodeclub.gr/cpp"><img class="logo_back"></a> <script src="https://grcodeclub.github.io/js/add/logo-back.js"></script>
+                <div class="text_bg"> <!-- Αρχή Background Κειμένου-->
+
+                    <h1 class="title">Υπερφόρτωση τελεστών</h1>
+                    <p>Τελεστές που δέχονται υπερφόρτωση είναι:</p>
+                        <table style="color: white;">
+                            <tr><td>+</td><td>*</td><td>-</td><td>/</td><td>=</td><td>&lt;</td><td>&gt;</td></tr>
+                            <tr><td>+=</td><td>*=</td><td>-=</td><td>/=</td><td>&lt;&lt;</td><td>&gt;&gt;</td><td>++</td></tr>
+                            <tr><td>--</td><td>%</td><td>&</td><td>^</td><td>!</td><td>|</td><td>~</td></tr>
+                            <tr><td>&=</td><td>^=</td><td>|=</td><td>&&</td><td>||</td><td>%=</td><td>[]</td></tr>
+                            <tr><td>()</td><td>new</td><td>delete</td></tr>
+                        </table>
+                    <p>Για να υπερφορτώσουμε ένα τελεστή:</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">type operator sign (parameters);</code></pre></div></div>
+                    <p><u>Παράδειγμα</u></p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;iostream>
+
+using namespace std;
+
+class Complex {
+private:
+    int int1;  // Πρώτος ακέραιος αριθμός
+    int int2;  // Δεύτερος ακέραιος αριθμός
+
+public:
+    // Κανονικός κατασκευαστής χωρίς παραμέτρους
+    Complex() {
+        int1 = 0;
+        int2 = 0;
+    }
+
+    // Κανονικός κατασκευαστής με παραμέτρους
+    Complex(int num1, int num2) {
+        int1 = num1;
+        int2 = num2;
+    }
+
+    // Υπερφόρτωση του τελεστή + για πρόσθεση δύο αντικειμένων Complex
+    Complex operator + (const Complex& other) const {
+        Complex result;
+        result.int1 = int1 + other.int1;
+        result.int2 = int2 + other.int2;
+        return result;
+    }
+
+    // Υπερφόρτωση του τελεστή * για πολλαπλασιασμό δύο αντικειμένων Complex
+    Complex operator * (const Complex& other) const {
+        Complex result;
+        result.int1 = int1 * other.int1;
+        result.int2 = int2 * other.int2;
+        return result;
+    }
+
+    // Συνάρτηση για εμφάνιση των τιμών
+    void print() const {
+        cout &lt;&lt; "int1: " &lt;&lt; int1 &lt;&lt; ", int2: " &lt;&lt; int2 &lt;&lt; endl;
+    }
+};
+
+int main() {
+    // Δημιουργία δύο αντικειμένων Complex με ακέραιους αριθμούς
+    Complex num1(3, 4);  // int1 = 3, int2 = 4
+    Complex num2(1, 2);  // int1 = 1, int2 = 2
+
+    // Πρόσθεση των δύο αντικειμένων
+    Complex sum = num1 + num2;  // int1 = 3 + 1, int2 = 4 + 2
+
+    // Πολλαπλασιασμός των δύο αντικειμένων
+    Complex product = num1 * num2;  // int1 = 3 * 1, int2 = 4 * 2
+
+    // Εμφάνιση αποτελεσμάτων
+    cout &lt;&lt; "Sum: ";
+    sum.print();
+    cout &lt;&lt; "Product: ";
+    product.print();
+
+    return 0;
+}
+</code></pre></div></div>
+        
+                  </div><!-- Τέλος Background Κειμένου-->
+
+            </div> <!--Τέλος Κειμένου-->
+
+        </div> <!--Τέλος container-->
+        
+        <!-- Footer -->
+        <footer id="add-social"></footer><script src="https://grcodeclub.github.io/js/add/social.js"></script>
+    </body>
+</html>

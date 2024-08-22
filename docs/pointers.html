@@ -1,0 +1,99 @@
+
+<html>
+    <head>
+        <meta property="og:image" content="https://grcodeclub.gr/files-page/preview/cpp.png"/>
+        <meta property="og:title" content="Γλώσσα Προγραμματισμού C++ | Δείκτες">
+        <script src="https://grcodeclub.github.io/js/jquery.js"></script>
+        <script src="https://grcodeclub.github.io/programming/js/menu.js"></script>
+        <script src="https://grcodeclub.github.io/js/add/head.js"></script>
+        <script src="https://grcodeclub.github.io/js/prism.js"></script>
+        <style>
+            td{
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+     <body class="programming">
+        <div class="container">
+            <div id="add_headder_and_menu"></div><script src="https://grcodeclub.github.io/js/add/headder_and_menu.js"></script>
+
+            <div class="Text"> <!--Αρχή Κειμένου-->
+                <a href="https://grcodeclub.gr/cpp"><img class="logo_back"></a> <script src="https://grcodeclub.github.io/js/add/logo-back.js"></script>
+                <div class="text_bg"> <!-- Αρχή Background Κειμένου-->
+
+                    <h1 class="title">Δείκτες</h1>
+                    <h2 class="highlight_black">Δείκτες και πίνακες</h2>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">int numbers [20];
+ int * p;
+ p = numbers;
+// Η p είναι μια μεταβλητή δείκτη, ενώ η numbers είναι σταθερά δείκτη</code></pre></div></div>
+
+                    <h2 class="highlight_black">Δείκτες void</h2>
+                    <p>Οι δείκτες void είναι ειδικού τύπου δείκτες που μπορεί να δείχνουν σε οποιοδήποτε τύπο δεδομένων, με μοναδικό περιορισμό ότι τα δεδομένα στα οποία δείχνουν δεν μπορούν να αναφερθούν άμεσα, εφόσον το μέγεθός τους είναι ακαθόριστο.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">void increase (void* data, int type){......}</code></pre></div></div>
+                    
+                    <h2 class="highlight_black">Δείκτες σε συναρτήσεις</h2>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;iostream.h>
+
+int addition (int a, int b)
+{ return (a+b); }
+
+int subtraction (int a, int b)
+{ return (a-b); }
+
+int (*minus)(int,int) = subtraction;
+
+int operation (int x, int y, int (*functocall)(int,int))
+{ int g;
+  g = (*functocall)(x,y);
+  return (g); }
+
+int main () {
+    int m,n;
+    m = operation (7, 5, addition);
+    n = operation (20, m, minus);
+    cout &lt;&lt; n;
+    return 0; }</code></pre></div></div>
+                    
+                    <h2 class="highlight_black">Δείκτες σε κλάσεις</h2>
+                    <p>Δηλώνοντας μια κλάση δημιουργούμε έναν τύπο δεδομένων και συνεπώς μπορούμε να χρησιμοποιούμε το όνομα της κλάσης για τον ορισμό δείκτων του συγκεκριμένου τύπου.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">CRectangle * prect;</code></pre></div></div>
+                    <p style="font-size: 18px;">Για την <u>αναφορά</u> σε ένα μέλος αντικειμένου που δεικτοδοτείται μέσω ενός δείκτη χρησιμοποιείται ο τελεστής</p>
+                    <p style="font-size: 28px;">-></p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">int main () {
+  CRectangle a, *b, *c;
+  CRectangle * d = new CRectangle[2];
+  b= new CRectangle;
+  c= &a;
+  a.set_values (1,2);
+  b->set_values (3,4);
+  d->set_values (5,6);
+  d[1].set_values (7,8);
+  cout 	&lt	&lt "a area: " &lt	&lt a.area() &lt&lt endl;
+  cout &lt&lt "*b area: " &lt&lt b->area() &lt&lt endl;
+  cout &lt&lt "*c area: " &lt&lt c->area() &lt&lt endl;
+  cout &lt&lt "d[0] area: " &lt&lt d[0].area() &lt&lt endl;
+  cout &lt&lt "d[1] area: " &lt&lt d[1].area() &lt&lt endl;
+  return 0;
+}</code></pre></div></div>
+                <p>Σύνοψη τελεστών για λειτ. δεικτών</p>
+                <table style="color: white;">
+                    <tr><td>*x</td><td>δείκτης στο x (δήλωση), περιεχόμενο του x (έκφραση)</td></tr>
+                    <tr><td>&x</td><td>διεύθυνση του x (έκφραση), αναφορά (σε πέρασμα)</td></tr>
+                    <tr><td>x.y</td><td>μέλος y του αντικειμένου x</td></tr>
+                    <tr><td>(*x).y</td><td>μέλος y του αντικειμένου που δεικτοδοτείται από τον x</td></tr>
+                    <tr><td>x->y</td><td>ισοδύναμο με το προηγούμενο</td></tr>
+                    <tr><td>x[0]</td><td>το πρώτο αντικείμενο που δεικτοδοτείται από τον </td></tr>
+                    <tr><td>x[n]</td><td>το n+1 αντικείμενο που δεικτοδοτείται από τον x</td></tr>
+                </table>
+                </div><!-- Τέλος Background Κειμένου-->
+
+            </div> <!--Τέλος Κειμένου-->
+
+        </div> <!--Τέλος container-->
+        
+        <!-- Footer -->
+        <footer id="add-social"></footer><script src="https://grcodeclub.github.io/js/add/social.js"></script>
+    </body>
+</html>

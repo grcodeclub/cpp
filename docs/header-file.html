@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <meta property="og:image" content="https://grcodeclub.gr/files-page/preview/cpp.png"/>
+        <meta property="og:title" content="Γλώσσα Προγραμματισμού C++ | Header File">
+        <script src="https://grcodeclub.github.io/js/jquery.js"></script>
+        <script src="https://grcodeclub.github.io/programming/js/menu.js"></script>
+        <script src="https://grcodeclub.github.io/js/add/head.js"></script>
+        <script src="https://grcodeclub.github.io/js/prism.js"></script>
+        <style>
+            td{
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+     <body class="programming">
+        <div class="container">
+            <div id="add_headder_and_menu"></div><script src="https://grcodeclub.github.io/js/add/headder_and_menu.js"></script>
+
+            <div class="Text"> <!--Αρχή Κειμένου-->
+                 <a href="https://grcodeclub.gr/cpp"><img class="logo_back"></a> <script src="https://grcodeclub.github.io/js/add/logo-back.js"></script>
+                <div class="text_bg"> <!-- Αρχή Background Κειμένου-->
+
+                    <h1 class="title">Header File</h1>
+                    <h2 class="highlight_black">Δημιουργία του Header File</h2>
+                    <ol>
+                        <li>#ifndef (If Not Defined)
+                            <ul style="list-style-type: disc;">
+                                <li>Ελέγχει αν η μακροεντολή έχει ήδη οριστεί.</li>
+                                <li>Αν δεν είναι ορισμένη, προχωράει στην εκτέλεση του επόμενου κώδικα.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            #define
+                            <ul style="list-style-type: disc;">
+                                <li>Ορίζει τη μακροεντολή ώστε την επόμενη φορά που ο compiler συναντήσει το ίδιο header file, να παραλείψει τον κώδικα που βρίσκεται μεταξύ του #ifndef και του #endif.</li>
+                            </ul>
+                        </li>
+                            <li>
+                                #endif
+                                <ul style="list-style-type: disc;"><li>Κλείνει τον conditional block, δηλαδή τον κώδικα που θα εκτελεστεί μόνο αν η μακροεντολή δεν ήταν ήδη ορισμένη.</li></ul>
+                            </li>
+                    </ol>
+                    <h2 class="highlight_black">Compiling</h2>
+                    <div class="terminal"><pre class="command-line" data-user="grcodeclub" data-host="linux"><code class="language-bash">g++ main.cpp my_functions.cpp -o my_program</code></pre></div>  
+                    <label style="margin-left: 10px;">Αρχείο</label>
+                    <select id="code" style="color: white;border-radius: 10px; background-color: rgba(0, 0, 0, 0.795); border: none;
+                    font-size: 18px; outline: none; cursor: pointer;">
+                            <option value="-">Διάλεξε αρχείο</option>
+                            <option value="https://grcodeclub.gr/cpp/header-file/my_functions.h">my_functions.h</option>
+                            <option value="https://grcodeclub.gr/cpp/header-file/my_functions.cpp">my_functions.cpp</option>
+                            <option value="https://grcodeclub.gr/cpp/header-file/main.cpp">main.cpp</option>
+                    </select> <br><br>
+                    <div class="bg_preview">
+                        <div class="appearance">
+                            <div class="space">
+                                <div class="buttons1"> </div>
+                                <div class="buttons2"> </div>
+                                <div class="buttons3"></div>
+                            </div>
+                            <div id="name"></div>
+                        </div>
+                        <div id="load">  </div>
+                    </div>
+                    <script src="https://grcodeclub.github.io/javascript/preview/code.js"></script>
+
+
+                </div><!-- Τέλος Background Κειμένου-->
+
+            </div> <!--Τέλος Κειμένου-->
+
+        </div> <!--Τέλος container-->
+        
+        <!-- Footer -->
+        <footer id="add-social"></footer><script src="https://grcodeclub.github.io/js/add/social.js"></script>
+    </body>
+</html>

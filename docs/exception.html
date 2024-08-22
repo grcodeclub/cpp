@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta property="og:image" content="https://grcodeclub.github.io/file/background/3.png"/>
+        <meta property="og:title" content="Γλώσσα Προγραμματισμού C++ | Χειρισμός εξαιρέσεων">
+        <script src="https://grcodeclub.github.io/js/jquery.js"></script>
+        <script src="https://grcodeclub.github.io/programming/js/menu.js"></script>
+        <script src="https://grcodeclub.github.io/js/add/head.js"></script>
+        <script src="https://grcodeclub.github.io/js/prism.js"></script>
+    </head>
+
+     <body class="programming">
+        <div class="container">
+            <div id="add_headder_and_menu"></div><script src="https://grcodeclub.github.io/js/add/headder_and_menu.js"></script>
+
+            <div class="Text"> <!--Αρχή Κειμένου-->
+                 <a href="https://grcodeclub.gr/cpp"><img class="logo_back"></a> <script src="https://grcodeclub.github.io/js/add/logo-back.js"></script>
+                <div class="text_bg"> <!-- Αρχή Background Κειμένου-->
+
+                    <h1 class="title">Χειρισμός εξαιρέσεων</h1>
+                    <p>Κατά τη διάρκεια ανάπτυξης ενός προγράμματος, μπορεί να υπάρξουν περιπτώσεις, όπου δεν έχουμε τη βεβαιότητα ότι το συγκεκριμένο κομμάτι κώδικα θα δουλέψει σωστά, είτε επειδή μπορεί να προσπαθήσει να προσπελάσει πόρους που δεν υπάρχουν, είτε επειδή βγαίνει εκτός ορίων, ...</p>
+                    <div class="bg_preview">
+                    <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">try { // κώδικας που θα δοκιμαστεί
+	throw exception;}
+catch (type  exception) {
+	// κώδικας που θα εκτελεστεί σε περίπτωση εξαίρεσης
+}</code></pre></div></div>
+                <ol>
+                    <li>Ο κώδικας στο μπλοκ try εκτελείται κανονικά</li>
+                    <li>Αν κάτι συμβεί ο κώδικας χρησιμοποιεί τη λέξη throw και μια παράμετρο για να προκαλέσει εξαίρεση</li>
+                    <li>Αν έχει συμβεί μια εξαίρεση, το μπλοκ catch εκτελείται λαμβάνοντας ως παράμετρο αυτή που περάστηκε από το throw</li>
+                </ol>
+
+                <h3 class="highlight_black"></h3>
+                <p>Η C++ διαθέτει προκαθορισμένες κλάσεις εξαιρέσεων στην std βιβλιοθήκη. 
+                    Η std::exception είναι η βασική κλάση από την οποία μπορούν να κληρονομηθούν 
+                    άλλες κλάσεις εξαιρέσεων.</p>
+                <table class="style2">
+                    <tr><td>std::runtime_error</td><td>Χρησιμοποιείται για να αναφέρει λάθη που συμβαίνουν κατά την εκτέλεση του προγράμματος και που δεν μπορούν να προβλεφθούν κατά τη διάρκεια του χρόνου μεταγλώττισης.</td><td><a href="./runtime_error.cpp" class="link_open" download>Παραδειγμα</a></td></tr>
+                    <tr><td>std::logic_erroρ</td><td>Χρησιμοποιείται για να αναφέρει λάθη λογικής που μπορεί να προβλεφθούν και να διορθωθούν κατά τον χρόνο ανάπτυξης του προγράμματος.</td><td><a href="./logic_erroρ.cpp" class="link_open" download>Παραδειγμα</a></td></tr>
+                    <tr><td>std::out_of_range</td><td>Χρησιμοποιείται για να αναφέρει προσπάθειες πρόσβασης σε στοιχεία εκτός των ορίων μιας δομής δεδομένων (π.χ. πρόσβαση σε έναν δείκτη εκτός των ορίων ενός πίνακα).</td><td><a href="./out_of_range.cpp" class="link_open" download>Παραδειγμα</a></td></tr>
+                    <tr><td>std::invalid_argument</td><td>Χρησιμοποιείται για να αναφέρει μη έγκυρα επιχειρήματα που δίνονται σε μια συνάρτηση.</td><td><a href="./invalid_argument.cpp" class="link_open" download>Παραδειγμα</a></td></tr>
+                    <tr><td>std::bad_alloc</td><td>Χρησιμοποιείται για να αναφέρει αποτυχία κατανομής μνήμης. Συνήθως πετιέται από τον τελεστή new όταν αποτυγχάνει να δεσμεύσει τη μνήμη που ζητήθηκε.</td><td><a href="./bad_alloc.cpp" class="link_open" download>Παραδειγμα</a></td></tr>
+                </table>
+                </div><!-- Τέλος Background Κειμένου-->
+
+            </div> <!--Τέλος Κειμένου-->
+
+        </div> <!--Τέλος container-->
+        
+        <!-- Footer -->
+        <footer id="add-social"></footer><script src="https://grcodeclub.github.io/js/add/social.js"></script>
+    </body>
+</html>

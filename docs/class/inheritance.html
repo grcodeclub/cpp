@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta property="og:image" content="https://grcodeclub.gr/files-page/preview/cpp.png"/>
+        <meta property="og:title" content="Γλώσσα Προγραμματισμού C++ | Κληρονομικότητα">
+        <script src="https://grcodeclub.github.io/js/jquery.js"></script>
+        <script src="https://grcodeclub.github.io/programming/js/menu.js"></script>
+        <script src="https://grcodeclub.github.io/javascript/add-elements/head.js"></script>
+        <script src="https://grcodeclub.github.io/js/prism.js"></script>
+    </head>
+
+     <body class="programming">
+        <div class="container">
+             <div id="add_headder_and_menu"></div><script src="https://grcodeclub.gr/javascript/add-elements/headder_and_menu.js"></script>
+
+            <div class="Text"> <!--Αρχή Κειμένου-->
+                 <a href="https://grcodeclub.gr/cpp/class"><img class="logo_back"></a> <script src="https://grcodeclub.github.io/js/add/logo-back.js"></script>
+                <div class="text_bg"> <!-- Αρχή Background Κειμένου-->
+
+                    <h1 class="title">Κληρονομικότητα</h1>
+                    <div class="bg_preview">
+                    <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">class derived_class_name: public base_class_name;</code></pre></div></div>
+                    <ol>
+                      <li>Η κλάση που παράγεται από μια άλλη κλάση κληρονομεί όλα τα ορατά μέλη της βασικής κλάσης.</li>
+                      <li>Όταν δημιουργούμε μια παράγωγη κλάση, τα protected μέλη της βασικής κλάσης μπορούν να χρησιμοποιηθούν από άλλα μέλη της παράγωγης κλάσης. Τα private μέλη, δεν μπορούν.</li>
+                    </ol>
+                    <table class="style2">
+                      <tr><td>Πρόσβαση</td><td>public</td><td>protected</td><td>private</td></tr>
+                      <tr><td>Μέλη της ίδιας κλάσης</td><td>ΝΑΙ</td><td>ΝΑΙ</td><td>ΝΑΙ</td></tr>
+                      <tr><td>Μέλη παραγώμενων κλάσεων</td><td>ΝΑΙ</td><td>ΝΑΙ</td><td>ΟΧΙ</td></tr>
+                      <tr><td>Μη μέλη (Αναφορά εκτός κλάσης, π.χ. από τη main(), άλλη κλάση, συνάρτηση, είτε καθολική είτε τοπική)</td><td>ΝΑΙ</td><td>ΟΧΙ</td><td>ΟΧΙ</td></tr>
+                    </table>
+                    <h3 class="highlight_black">Κάθε μέλος της βασικής κλάσης κληρονομείται εκτός απο :</h3>
+                    <ol>
+                      <li>τον κατασκευαστή</li>
+                      <li>τον καταστροφέα</li>
+                      <li>το μέλος operator=()</li>
+                      <li>τις friend συναρτήσεις – κλάσεις</li>
+                    </ol>
+                  
+                </div><!-- Τέλος Background Κειμένου-->
+
+            </div> <!--Τέλος Κειμένου-->
+
+        </div> <!--Τέλος container-->
+        
+        <!-- Footer -->
+        <footer>
+            <table class="add_footer"></table>
+            <script src="https://grcodeclub.github.io/js/footer.js"></script>       
+        </footer>
+    </body>
+</html>

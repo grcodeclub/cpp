@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <meta property="og:image" content="https://grcodeclub.github.io/file/background/3.png"/>
+        <meta property="og:title" content="Γλώσσα Προγραμματισμού C++ | Αρχεία">
+        <script src="https://grcodeclub.github.io/js/jquery.js"></script>
+        <script src="https://grcodeclub.github.io/programming/js/menu.js"></script>
+        <script src="https://grcodeclub.github.io/js/add/head.js"></script>
+        <script src="https://grcodeclub.github.io/js/prism.js"></script>
+        <style>
+            td{
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+     <body class="programming">
+        <div class="container">
+            <div id="add_headder_and_menu"></div><script src="https://grcodeclub.github.io/js/add/headder_and_menu.js"></script>
+            <div class="Text"> <!--Αρχή Κειμένου-->
+                 <a href="https://grcodeclub.gr/cpp"><img class="logo_back"></a> <script src="https://grcodeclub.github.io/js/add/logo-back.js"></script>
+                <div class="text_bg"> <!-- Αρχή Background Κειμένου-->
+
+                    <h1 class="title">Αρχεία</h1>
+                    <p>Η C++ υποστηρίζει αρχεία εισόδου/εξόδου μέσω των κλάσεων.</p>
+                    <ul>
+                        <li>ofstream: Υποστήριξη λειτουργιών εγγραφής</li>
+                        <li>ifstream: Υποστήριξη λειτουργιών ανάγνωσης</li>
+                        <li>fstream: Υποστήριξη λειτουργιών εγγραφής/ανάγνωσης</li>
+                    </ul>
+                    <h3 class="highlight_black">Άνοιγμα αρχείου μέσω δημιουργίας αντικειμένου ρεύματος (stream object) και χρήσης μεθόδου open()</h3>
+                    <h3 class="highlight_black">Κλείσιμο αρχείου μέσω συνάρτησης : close()</h3>
+                    <h3 class="highlight_black">Mode</h3>
+                    <table class="style2">
+                        <tr><td>ios::in</td><td>Αρχείο για ανάγνωση</td></tr>
+                        <tr><td>ios::out</td><td>Αρχείο για εγγραφή</td></tr>
+                        <tr><td>ios::ate</td><td>Αρχική θέση: τέλος αρχείου</td></tr>
+                        <tr><td>ios::app</td><td>Κάθε έξοδος προστίθεται στο τέλος του αρχείου</td></tr>
+                        <tr><td>ios::trunc</td><td>Αν το αρχείο προϋπάρχει, σβήνεται</td></tr>
+                        <tr><td>ios::binary</td><td>Δυαδικά αρχεία</td></tr>
+                    </table>
+                    <p><u>Παράδειγμα</u></p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">ofstream file;
+file.open("example.txt", ios::out | ios::app);</code></pre></div></div>
+                    <table class="style2">
+                        <tr><td>Class</td><td>Προεπιλεγμένη λειτουργία</td></tr>
+                        <tr><td>ofstream</td><td>ios::out</td></tr>
+                        <tr><td>ifstream</td><td>ios::in</td></tr>
+                        <tr><td>fstream</td><td>ios::in | ios::out</td></tr>
+                    </table>
+
+                    <h3 class="highlight_black">Παραδείγματα</h3>
+                    <label style="margin-left: 10px;">Αρχείο</label>
+                    <select id="code" style="color: white;border-radius: 10px; background-color: rgba(0, 0, 0, 0.795); border: none;
+                    font-size: 18px; outline: none; cursor: pointer;">
+                            <option value="-">Διάλεξε αρχείο</option>
+                            <option value="https://grcodeclub.gr/cpp/files/write-txt-file.cpp">write-txt-file.cpp</option>
+                            <option value="https://grcodeclub.gr/cpp/files/open-fstream.cpp">open-fstream.cpp</option>
+                            <option value="https://grcodeclub.gr/cpp/files/fcopy.cpp">fcopy.cpp</option>
+                            <option value="https://grcodeclub.gr/cpp/files/error-flags.cpp">error-flags.cpp</option>
+                    </select> <br><br>
+                    <div class="bg_preview">
+                        <div class="appearance">
+                            <div class="space">
+                                <div class="buttons1"> </div>
+                                <div class="buttons2"> </div>
+                                <div class="buttons3"></div>
+                            </div>
+                            <div id="name"></div>
+                        </div>
+                        <div id="load">  </div>
+                    </div>
+                    <script src="https://grcodeclub.github.io/javascript/preview/code.js"></script>
+
+
+                </div><!-- Τέλος Background Κειμένου-->
+
+            </div> <!--Τέλος Κειμένου-->
+
+        </div> <!--Τέλος container-->
+        
+        <!-- Footer -->
+        <footer id="add-social"></footer><script src="https://grcodeclub.github.io/js/add/social.js"></script>
+    </body>
+</html>

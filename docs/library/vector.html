@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta property="og:image" content="https://grcodeclub.gr/files-page/preview/cpp.png"/>
+        <meta property="og:title" content="Γλώσσα Προγραμματισμού C++ | Vector">
+        <script src="https://grcodeclub.github.io/js/jquery.js"></script>
+        <script src="https://grcodeclub.github.io/programming/js/menu.js"></script>
+        <script src="https://grcodeclub.github.io/js/add/head.js"></script>
+        <script src="https://grcodeclub.github.io/js/prism.js"></script>
+        <style>
+            td{
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+
+     <body class="programming">
+        <div class="container">
+            <div id="add_headder_and_menu"></div><script src="https://grcodeclub.github.io/js/add/headder_and_menu.js"></script>
+            <div class="Text"> <!--Αρχή Κειμένου-->
+                 <a href="https://grcodeclub.gr/cpp/library"><img class="logo_back"></a> <script src="https://grcodeclub.github.io/js/add/logo-back.js"></script>
+                <div class="text_bg"> <!-- Αρχή Background Κειμένου-->
+
+                    <h1 class="title">Vector</h1>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;vector> // εισαγωγή βιβλιοθήκης</code></pre></div></div>
+                    <p>Ένα Vector είναι ενα διάνυσμα στοιχείων που μπορείτται να τα προσπελάσετε μέσω ενός δείκτη.<br>Δέχεται ΜΟΝΟ στοιχεία με τον τύπο στοιχεείου ποου έχει δηλωθεί.</p>
+                    <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">vector&lt;int> v={1,2,3,4,5,6} // vector με 6 στοιχεία int
+vector&lt;string> names = {"Diimitris","Maria"} // vector με 2 στοιχεία string
+vector&lt;int> vi(6) // vector με 6 στοιχεία int αρχικοποιημένα σε 0
+vector&lt;string> vname(6) // vector με 6 στοιχεία string αρχικοποιημένα σε ""</code></pre></div></div>
+
+                <h2 class="highlight_black">Εκτύπωση στοιχείων</h2>
+                <p>Με το <code>v.size()</code> δίνει τον αριθμό των στοιχείων του vector μεε όνομα v</p>
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">vector&lt;int> v={1,2,3,4,5,6}
+for (int i=0; i&lt;v.size(); ++i){
+    cout &lt;&lt; v[i] &lt;&lt; endl;
+}</code></pre></div></div>
+
+                <h2 class="highlight_black">push_back()</h2>
+                <p>Με το push_back(),μπορούμε να προσθέσουμε στο τέλος ένα νέο στοιχείο σε ένα vector.</p>\
+                <div class="bg_preview"><div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">#include &lt;iostream>
+#include &lt;vector>
+
+using namespace std; // Χρησιμοποιούμε το namespace std
+
+int main() {
+    // Δημιουργία vector ακεραίων
+    vector&lt;int> numbers;
+
+    // Προσθήκη στοιχείων με τη χρήση του push_back
+    numbers.push_back(10);
+    numbers.push_back(20);
+    numbers.push_back(30);
+
+    // Εμφάνιση των στοιχείων του vector
+    cout &lt;&lt; "Τα στοιχεία του vector είναι: ";
+    for (int i = 0; i &lt; numbers.size(); ++i) {
+        cout &lt;&lt; numbers[i] &lt;&lt; endl ;
+    }
+    return 0;
+}
+</code></pre></div></div>
+                </div><!-- Τέλος Background Κειμένου-->
+
+            </div> <!--Τέλος Κειμένου-->
+
+        </div> <!--Τέλος container-->
+        
+        <!-- Footer -->
+        <footer id="add-social"></footer><script src="https://grcodeclub.github.io/js/add/social.js"></script>
+    </body>
+</html>
