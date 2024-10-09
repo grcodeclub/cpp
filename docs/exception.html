@@ -1,43 +1,33 @@
-<html>
-    <head>
-        <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/cpp.png"/>
-        <meta property="og:title" content="Γλώσσα Προγραμματισμού C++ | Χειρισμός εξαιρέσεων">
-        <script src="https://grcodeclub.github.io/js/add/data.js"></script>
-    </head>
-
-     <body>
-        <div class="container">
-            <div id="add_headder_and_menu"></div>
-
-            <div class="Text"> <!--Αρχή Κειμένου-->
-                <a href="./"><h1 id="back_page"></h1></a> 
-                <div class="text_bg"> <!-- Αρχή Background Κειμένου-->
-
-                    <h1 class="title">Χειρισμός εξαιρέσεων</h1>
-                    <p>Κατά τη διάρκεια ανάπτυξης ενός προγράμματος, μπορεί να υπάρξουν περιπτώσεις, όπου δεν έχουμε τη βεβαιότητα ότι το συγκεκριμένο κομμάτι κώδικα θα δουλέψει σωστά, είτε επειδή μπορεί να προσπαθήσει να προσπελάσει πόρους που δεν υπάρχουν, είτε επειδή βγαίνει εκτός ορίων, ...</p>
-                    <div class="bg_preview">
-                    <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">try { // κώδικας που θα δοκιμαστεί
-	throw exception;}
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/cpp.png"/>
+    <meta property="og:title" content="Γλώσσα Προγραμματισμού C++ | Χειρισμός εξαιρέσεων">
+    <meta charset="UTF-8">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Χειρισμός εξαιρέσεων</h1>
+        <p>Κατά τη διάρκεια ανάπτυξης ενός προγράμματος, μπορεί να υπάρξουν περιπτώσεις, όπου δεν έχουμε τη βεβαιότητα ότι το συγκεκριμένο κομμάτι κώδικα θα δουλέψει σωστά, είτε επειδή μπορεί να προσπαθήσει να προσπελάσει πόρους που δεν υπάρχουν, είτε επειδή βγαίνει εκτός ορίων, ...</p>
+        <div class="bg_preview">
+        <div  class="line-numbers"><pre class="code_editor"><code class="language-cpp">try { // κώδικας που θα δοκιμαστεί
+throw exception;}
 catch (type  exception) {
-	// κώδικας που θα εκτελεστεί σε περίπτωση εξαίρεσης
+// κώδικας που θα εκτελεστεί σε περίπτωση εξαίρεσης
 }</code></pre></div></div>
-                <ol>
-                    <li>Ο κώδικας στο μπλοκ try εκτελείται κανονικά</li>
-                    <li>Αν κάτι συμβεί ο κώδικας χρησιμοποιεί τη λέξη throw και μια παράμετρο για να προκαλέσει εξαίρεση</li>
-                    <li>Αν έχει συμβεί μια εξαίρεση, το μπλοκ catch εκτελείται λαμβάνοντας ως παράμετρο αυτή που περάστηκε από το throw</li>
-                </ol>
+    <ol>
+        <li>Ο κώδικας στο μπλοκ try εκτελείται κανονικά</li>
+        <li>Αν κάτι συμβεί ο κώδικας χρησιμοποιεί τη λέξη throw και μια παράμετρο για να προκαλέσει εξαίρεση</li>
+        <li>Αν έχει συμβεί μια εξαίρεση, το μπλοκ catch εκτελείται λαμβάνοντας ως παράμετρο αυτή που περάστηκε από το throw</li>
+    </ol>
 
-                <h3 class="highlight"></h3>
-                <p>Η C++ διαθέτει προκαθορισμένες κλάσεις εξαιρέσεων στην std βιβλιοθήκη. 
-                    Η std::exception είναι η βασική κλάση από την οποία μπορούν να κληρονομηθούν 
-                    άλλες κλάσεις εξαιρέσεων.</p>
-        
-                </div><!-- Τέλος Background Κειμένου-->
-
-            </div> <!--Τέλος Κειμένου-->
-
-        </div> <!--Τέλος container-->
-        
-         <footer id="addFooter"></footer> <!-- Footer -->
-    </body>
+    <p>Η C++ διαθέτει προκαθορισμένες κλάσεις εξαιρέσεων στην std βιβλιοθήκη. 
+        Η std::exception είναι η βασική κλάση από την οποία μπορούν να κληρονομηθούν 
+        άλλες κλάσεις εξαιρέσεων.</p>    
+    </div>
+    <div id="addFooter"></div>
+</body>
 </html>
