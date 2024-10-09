@@ -1,29 +1,33 @@
-<html>
-    <head>
-        <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/cpp.png"/>
-        <meta property="og:title" content="Γλώσσα προγραμματισμού C++ | Βιβλιοθήκες">
-        <script src="https://grcodeclub.github.io/js/add/data.js"></script>
-    </head>
-
-    <body>
-        <div class="container">
-            <div id="add_headder_and_menu"></div>
-            <div class="Text"> <!--Αρχή Κειμένου-->
-                <a href="../"><h1 id="back_page"></h1></a>
-                <div class="text_bg"> <!-- Αρχή Background Κειμένου-->
-                    <h1 class="title">Bιβλιοθήκες<br><div class="search" id="search"><input style="width: 100%;" type="input" class="form__field" placeholder="Αναζήτηση" id='searchInput'/></div></h1>
-                    <h2><a class="link" href="https://grcodeclub.github.io/programming/c/library.html">Bιβλιοθήκες C</a></h2>
-                    <table id="search_table_page">
-                        <tr id="title-table"><td>Βιβλιοθήκη</td> <td>Περιγραφή</td></tr>
-                        <tr><td><code>#include &lt;iostream&gt;</code></td><td>Εισαγωγή/έξοδος δεδομένων</td></tr>
-                        <tr><td><code><a class="link" href="./cmath">#include &lt;cmath&gt;</a></code></td><td>Μαθηματικές συναρτήσεις</td></tr>
-                        <tr ><td><code><a class="link" href="./vector">#include &lt;vector&gt;</a></code><td>Δυναμικά διανύσματα</td></tr>
-                        <tr><td><code>#include &lt;algorithm&gt;</code></td><td>Αλγόριθμοι για την επεξεργασία δομών</td</tr>
-                        <tr><td><code><a class="link" href="https://grcodeclub.gr/cpp/files/">#include &lt;fstream&gt;</a></code></td> <td>Εισαγωγή/έξοδος αρχείων</td></tr></table>
-                    <div class="pagination" id="pagination"></div>
-                </div><!-- Τέλος Background Κειμένου-->
-            </div> <!--Τέλος Κειμένου-->
-        </div> <!--Τέλος container-->
-      <footer id="addFooter"></footer> <!-- Footer -->
-    </body>
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta property="og:image" content="https://grcodeclub.github.io/files-page/preview/programming/cpp.png"/>
+    <meta property="og:title" content="Γλώσσα προγραμματισμού C++ | Βιβλιοθήκες">
+    <meta charset="UTF-8">
+    <title>GrCode Club</title>
+    <script src="https://grcodeclub.gr/js/data.js"></script>
+</head>
+<body>
+    <div id="addHeader"></div>
+    <div class="container">
+        <h1 class="title">Bιβλιοθήκες</h1>
+        <input type="text"  id='searchInput' class="form-control" placeholder="Αναζήτηση">
+        <br>
+        <table id="search_table_page" class="table table-bordered">
+            <tr id="title-table"><td>Βιβλιοθήκη</td> <td>Περιγραφή</td></tr>
+            <tr><td>#include &lt;iostream&gt;</td><td>Εισαγωγή/έξοδος δεδομένων</td></tr>
+            <tr><td><a class="link_here" href="./cmath">#include &lt;cmath&gt;</a></td><td>Μαθηματικές συναρτήσεις</td></tr>
+            <tr ><td><a class="link_here" href="./vector">#include &lt;vector&gt;</a><td>Δυναμικά διανύσματα</td></tr>
+            <tr><td>#include &lt;algorithm&gt;</td><td>Αλγόριθμοι για την επεξεργασία δομών</td</tr>
+            <tr><td><a class="link_here" href="https://grcodeclub.gr/cpp/files/">#include &lt;fstream&gt;</a></td> <td>Εισαγωγή/έξοδος αρχείων</td></tr>
+        </table>
+        <div class="pagination" id="pagination"></div>
+        <nav aria-label="Σελιδοποίηση">
+            <ul id="pagination" class="pagination justify-content-center">
+                <!-- Οι σελίδες θα προστεθούν εδώ από το JavaScript -->
+            </ul>
+        </nav>   
+    </div>
+    <div id="addFooter"></div>
+</body>
 </html>
